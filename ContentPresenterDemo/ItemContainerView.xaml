@@ -9,44 +9,10 @@
              xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
-    <StackPanel Margin="5" Background="Gainsboro">
-        <!--<TextBlock Text="{Binding }"></TextBlock>
-        
-        <TextBlock Text="{Binding Value}"></TextBlock>-->
 
+    <StackPanel Margin="5" Background="Gainsboro">
         <ContentPresenter x:Name="ContentPresenter" Content="{Binding}">
             <i:Interaction.Triggers>
-                <!--<i:DataTrigger Binding="{Binding Value}" Comparison="Equal" Value="1">
-                    <i:ChangePropertyAction PropertyName="ContentTemplate">
-                        <i:ChangePropertyAction.Value>
-                            <DataTemplate>
-                                <local:ControlOneView></local:ControlOneView>
-                            </DataTemplate>
-                        </i:ChangePropertyAction.Value>
-                    </i:ChangePropertyAction>
-                </i:DataTrigger>
-
-                <i:DataTrigger Binding="{Binding Value}" Comparison="Equal" Value="2">
-                    <i:ChangePropertyAction PropertyName="ContentTemplate">
-                        <i:ChangePropertyAction.Value>
-                            <DataTemplate>
-                                <local:ControlTwoView></local:ControlTwoView>
-                            </DataTemplate>
-                        </i:ChangePropertyAction.Value>
-                    </i:ChangePropertyAction>
-                </i:DataTrigger>
-
-                <i:DataTrigger Binding="{Binding Value}" Comparison="Equal" Value="3">
-                    <i:ChangePropertyAction PropertyName="ContentTemplate">
-                        <i:ChangePropertyAction.Value>
-                            <DataTemplate>
-                                <local:ControlThreeView></local:ControlThreeView>
-                            </DataTemplate>
-                        </i:ChangePropertyAction.Value>
-                    </i:ChangePropertyAction>
-                </i:DataTrigger>-->
-
                 <i:PropertyChangedTrigger Binding="{Binding Value,  diag:PresentationTraceSources.TraceLevel=High}">
                     <i:Interaction.Behaviors>
                         <i:ConditionBehavior>

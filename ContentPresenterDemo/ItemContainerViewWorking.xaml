@@ -11,10 +11,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
     
     <StackPanel Margin="5" Background="Gainsboro">
-        <!--<TextBlock Text="{Binding }"></TextBlock>
-        
-        <TextBlock Text="{Binding Value}"></TextBlock>-->
-
         <ContentPresenter x:Name="ContentPresenter" Content="{Binding}">
             <i:Interaction.Triggers>
                 <i:DataTrigger Binding="{Binding Value}" Comparison="Equal" Value="1">
@@ -46,7 +42,6 @@
                         </i:ChangePropertyAction.Value>
                     </i:ChangePropertyAction>
                 </i:DataTrigger>
-
             </i:Interaction.Triggers>
         </ContentPresenter>
     </StackPanel>
