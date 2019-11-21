@@ -34,6 +34,48 @@
                     </i:ChangePropertyAction>
                 </i:PropertyChangedTrigger>
 
+                <i:PropertyChangedTrigger Binding="{Binding Value,  diag:PresentationTraceSources.TraceLevel=High}">
+                    <i:Interaction.Behaviors>
+                        <i:ConditionBehavior>
+                            <i:ConditionalExpression>
+                                <i:ComparisonCondition LeftOperand="{Binding Value, diag:PresentationTraceSources.TraceLevel=High}" 
+                                                       Operator="Equal" 
+                                                       RightOperand="2" />
+                            </i:ConditionalExpression>
+                        </i:ConditionBehavior>
+                    </i:Interaction.Behaviors>
+
+
+                    <i:ChangePropertyAction PropertyName="ContentTemplate">
+                        <i:ChangePropertyAction.Value>
+                            <DataTemplate>
+                                <local:ControlTwoView DataContext="{Binding}"></local:ControlTwoView>
+                            </DataTemplate>
+                        </i:ChangePropertyAction.Value>
+                    </i:ChangePropertyAction>
+                </i:PropertyChangedTrigger>
+
+                <i:PropertyChangedTrigger Binding="{Binding Value,  diag:PresentationTraceSources.TraceLevel=High}">
+                    <i:Interaction.Behaviors>
+                        <i:ConditionBehavior>
+                            <i:ConditionalExpression>
+                                <i:ComparisonCondition LeftOperand="{Binding Value, diag:PresentationTraceSources.TraceLevel=High}" 
+                                                       Operator="Equal" 
+                                                       RightOperand="3" />
+                            </i:ConditionalExpression>
+                        </i:ConditionBehavior>
+                    </i:Interaction.Behaviors>
+
+
+                    <i:ChangePropertyAction PropertyName="ContentTemplate">
+                        <i:ChangePropertyAction.Value>
+                            <DataTemplate>
+                                <local:ControlThreeView DataContext="{Binding}"></local:ControlThreeView>
+                            </DataTemplate>
+                        </i:ChangePropertyAction.Value>
+                    </i:ChangePropertyAction>
+                </i:PropertyChangedTrigger>
+
             </i:Interaction.Triggers>
         </ContentPresenter>
     </StackPanel>
